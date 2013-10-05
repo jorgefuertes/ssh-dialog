@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rdialog (0.5.0)
+    yaml_config (1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rdialog
+  yaml_config

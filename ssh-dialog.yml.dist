@@ -1,0 +1,18 @@
+# ~/.config/ssh-dialog.yml
+
+defaults:
+    username: root
+
+groups:
+    martianoids:
+        hosts:
+            s1:
+                hostname: s1.martianoids.com
+                username: root
+    conecta:
+        hosts:
+            briana:
+                hostname: briana.traci.es
+            belladona:
+                hostname: belladona.traci.es
+
