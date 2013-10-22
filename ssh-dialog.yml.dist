@@ -4,15 +4,17 @@ defaults:
     username: root
 
 groups:
-    martianoids:
+    own-servers:
         hosts:
-            s1:
-                hostname: s1.martianoids.com
+            server1:
+                hostname: server1.domain.com
                 username: root
-    conecta:
+    work-servers:
         hosts:
-            briana:
-                hostname: briana.traci.es
-            belladona:
-                hostname: belladona.traci.es
+            server-2:
+                hostname: server2.domain.com
+                user: ubuntu
+                port: 222
+            server-3:
+                hostname: 555.555.555.555
 
