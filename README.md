@@ -16,6 +16,14 @@ Tips:
 
 - You can share the YML config with multiple computers using dropbox or other services.
 
+Requirements:
+-------------
+
+- Ruby, via RVM or similar.
+- Dialog utility.
+- Any text editor.
+- SSH client.
+
 Install:
 --------
 
@@ -40,7 +48,7 @@ Install:
 
 - Use your favorite __editor__ to make your own config.
 
-- __Exec__ ./ssh-dialog.rb, link to anywhere on your path...
+- __Exec__ `./ssh-dialog.rb`, link to anywhere on your path...
 
 I hope you like it!
 
