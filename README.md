@@ -77,9 +77,9 @@ groups:
 				hostname: my.server.tdl
 				# Optional: Key filename. Overrides group key
 				key: ~/.ssh/id_rsa
-				# Optional: Default o current username is used if not
+				# Optional: Default or current username is used if not especified
 				username: root
-				# Optional: Port number, standar 22 if not
+				# Optional: Port number, standar 22 if not especified
 				port: 222
 ```
 
