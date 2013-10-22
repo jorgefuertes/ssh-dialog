@@ -19,24 +19,28 @@ Tips:
 Install:
 --------
 
-- Install dialog command line utility:
+- __Install dialog__ command line utility:
 
-	- Debian: apt-get install dialog
-	- OsX: brew install dialog
+	- __Debian__: `apt-get install dialog`
+	- __OsX__: `brew install dialog`
 
-- Clone this repo and cd into his dir.
+- __Clone__ this repo and cd into his dir.
 
-- Make config dir:
+- __Bundle__, install gem dependencies:
 
-	- mkdir -p ~/.config
+	- `bundle install`
 
-- Copy the config example file:
+- __Make__ config dir:
 
-	- cp ssh-dialog.yml.dist ~/.config/ssh-dialog.yml
+	- `mkdir -p ~/.config`
 
-- Use your favorite editor to make your own config.
+- __Copy__ the config example file:
 
-- Exec ./ssh-dialog.rb, link to anywhere on your path...
+	- `cp ssh-dialog.yml.dist ~/.config/ssh-dialog.yml`
+
+- Use your favorite __editor__ to make your own config.
+
+- __Exec__ ./ssh-dialog.rb, link to anywhere on your path...
 
 I hope you like it!
 
