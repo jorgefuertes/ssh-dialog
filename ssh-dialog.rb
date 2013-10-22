@@ -4,6 +4,9 @@
 require 'rdialog'
 require 'yaml'
 require 'yaml_config'
+if system('dialog &> /dev/null') != true
+	raise "Cannot call dialog: Not installed?"
+end
 dialog = RDialog.new
 config = YamlConfig.new("#{ENV['HOME']}/.config/ssh-dialog.yml")
 
@@ -20,6 +23,9 @@ config.get(:groups).each do |group|
     groups.push([group[0]])
 end
 group = dialog.menu("Select a group:", groups)
+if group == false
+	raise "No group selected"
+end
 
 # Hosts dialog
 hosts = Array.new
@@ -27,6 +33,9 @@ config.get(:groups)[group]['hosts'].each do |host|
     hosts.push(["#{host[0]}", "#{host[1]['hostname']}"])
 end
 host = dialog.menu("Select host:", hosts)
+if host == false
+	raise "No host selected"
+end
 
 # Final username
 if config.get(:groups)[group]['hosts'][host]['username'].nil?
