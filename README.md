@@ -24,6 +24,11 @@ Requirements:
 - Any text editor.
 - SSH client.
 
+License:
+--------
+
+- GPLv2, view the LICENSE file.
+
 Install:
 --------
 
