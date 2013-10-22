@@ -1,0 +1,20 @@
+# ~/.config/ssh-dialog.yml
+
+defaults:
+    username: root
+
+groups:
+    own-servers:
+        hosts:
+            server1:
+                hostname: server1.domain.com
+                username: root
+    work-servers:
+        hosts:
+            server-2:
+                hostname: server2.domain.com
+                user: ubuntu
+                port: 222
+            server-3:
+                hostname: 555.555.555.555
+
