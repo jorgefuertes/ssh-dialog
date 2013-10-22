@@ -57,3 +57,29 @@ Install:
 
 I hope you like it!
 
+Config file format:
+-------------------
+
+```yml
+defaults:
+	# Optional: Defaults to current user if not exists
+	username: root
+
+groups:
+	# Any group title
+	group-1:
+		# Optional: Key filename for this group
+		key: ~/.ssh/id_rsa
+		hosts:
+			# Host title
+			own-server-one:
+				# FQDN or IP address
+				hostname: my.server.tdl
+				# Optional: Key filename. Overrides group key
+				key: ~/.ssh/id_rsa
+				# Optional: Default o current username is used if not
+				username: root
+				# Optional: Port number, standar 22 if not
+				port: 222
+```
+

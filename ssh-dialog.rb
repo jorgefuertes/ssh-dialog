@@ -36,6 +36,16 @@ host = dialog.menu("Select host:", hosts)
 if host == false
 	raise "No host selected"
 end
+hostname = config.get(:groups)[group]['hosts'][host]['hostname']
+
+# Key selection, host overrides group key:
+key = false
+if not config.get(:groups)[group]['key'].nil?
+	key = config.get(:groups)[group]['key']
+end
+if not config.get(:groups)[group]['hosts'][host]['key'].nil?
+	key = config.get(:groups)[group]['hosts'][host]['key']
+end
 
 # Final username
 if config.get(:groups)[group]['hosts'][host]['username'].nil?
@@ -53,5 +63,12 @@ end
 
 # SSH
 system('clear')
-puts "Connectig to #{config.get(:groups)[group]['hosts'][host]['hostname']} with user #{user}..."
-exec("ssh -p#{port} #{user}@#{config.get(:groups)[group]['hosts'][host]['hostname']}")
+puts "Connectig to #{hostname} with user #{user}..."
+if key == false
+	#exec("ssh -p#{port} #{user}@#{hostname}")
+	puts "ssh -p#{port} #{user}@#{hostname}"
+else
+	#exec("ssh -p#{port} -i #{key} #{user}@#{hostname}")
+	puts "ssh -p#{port} -i #{key} #{user}@#{hostname}"
+end
+

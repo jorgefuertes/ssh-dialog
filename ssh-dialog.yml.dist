@@ -5,6 +5,7 @@ defaults:
 
 groups:
     own-servers:
+	key: ~/.ssh/id_rsa
         hosts:
             server1:
                 hostname: server1.domain.com
@@ -17,4 +18,5 @@ groups:
                 port: 222
             server-3:
                 hostname: 555.555.555.555
+		key: ~/.ssh/id_rsa-key2
 
