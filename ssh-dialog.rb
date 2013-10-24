@@ -65,10 +65,10 @@ end
 system('clear')
 puts "Connectig to #{hostname} with user #{user}..."
 if key == false
-	#exec("ssh -p#{port} #{user}@#{hostname}")
-	puts "ssh -p#{port} #{user}@#{hostname}"
+	exec("ssh -p#{port} #{user}@#{hostname}")
+	#puts "ssh -p#{port} #{user}@#{hostname}"
 else
-	#exec("ssh -p#{port} -i #{key} #{user}@#{hostname}")
-	puts "ssh -p#{port} -i #{key} #{user}@#{hostname}"
+	exec("ssh -p#{port} -i #{key} #{user}@#{hostname}")
+	#puts "ssh -p#{port} -i #{key} #{user}@#{hostname}"
 end
 
